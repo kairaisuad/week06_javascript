@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html><head>
+    <p id="demo" style="display:none"></p>
+    <script>
+    const fruits = [
+        {
+            "id":1,
+            "name":"apple",
+            "price":10,
+            "img":"apple.jpg"
+        },
+        {
+            "id":2,
+            "name":"banaba",
+            "price":20,
+            "img":"banana.jpg" 
+        },
+        {
+            "id":3,
+            "name":"blueberry",
+            "price":30,
+            "img":"blueberry.jpg"    
+        },
+        {
+            "id":4,
+            "name":"cantaloupe",
+            "price":40,
+            "img":"cantaloupe.jpg"    
+        },
+        {
+            "id":5,
+            "name":"grapes",
+            "price":50,
+            "img":"grapes.jpg"    
+        },
+        {
+            "id":6,
+            "name":"mango",
+            "price":60,
+            "img":"mango.jpg"    
+        },
+        {
+            "id":7,
+            "name":"melon",
+            "price":70,
+            "img":"melon.jpg"    
+        },
+        {
+            "id":8,
+            "name":"orange",
+            "price":80,
+            "img":"orange.jpg"    
+        },
+        {
+            "id":9,
+            "name":"strawberry",
+            "price":90,
+            "img":"strawberry.jpg"    
+        },
+        {
+            "id":10,
+            "name":"watermelon",
+            "price":100,
+            "img":"watermelon.jpg"    
+        },
+    ]
+    
+    
+
+
+    fruits.forEach(myFunction);
+    function myFunction(item,index) {
+        var img = document.createElement('img');
+        img.src = item['img'];
+        img.width = 200;
+        img.height = 200;
+        document.getElementById('demo').appendChild(img);
+    }
+    function pushButton(){
+        var x = document.getElementById("demo");
+        if (x.style.display === 'none'){
+            x.style.display = "block";
+        }else{
+            x.style.display = "none";
+        }
+    }
+
+</script></head><body>
+    <!-- <img id="pic" src="orange.jpg"> -->
+    <button type="button" onclick="pushButton()">กดเลย</button>
+</body></html>
