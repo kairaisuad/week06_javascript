@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html><head>
+    <!-- <p id="demo" style="display:none">
+    </p> -->
+    <div id="demo" style="display:none""></div>
+    <script>
+    const fruits = [
+        {
+            "id":1,
+            "name":"apple",
+            "price":10,
+            "img":"apple.jpg"
+        },
+        {
+            "id":2,
+            "name":"banaba",
+            "price":20,
+            "img":"banana.jpg" 
+        },
+        {
+            "id":3,
+            "name":"blueberry",
+            "price":30,
+            "img":"blueberry.jpg"    
+        },
+        {
+            "id":4,
+            "name":"cantaloupe",
+            "price":40,
+            "img":"cantaloupe.jpg"    
+        },
+        {
+            "id":5,
+            "name":"grapes",
+            "price":50,
+            "img":"grapes.jpg"    
+        },
+        {
+            "id":6,
+            "name":"mango",
+            "price":60,
+            "img":"mango.jpg"    
+        },
+        {
+            "id":7,
+            "name":"melon",
+            "price":70,
+            "img":"melon.jpg"    
+        },
+        {
+            "id":8,
+            "name":"orange",
+            "price":80,
+            "img":"orange.jpg"    
+        },
+        {
+            "id":9,
+            "name":"strawberry",
+            "price":90,
+            "img":"strawberry.jpg"    
+        },
+        {
+            "id":10,
+            "name":"watermelon",
+            "price":100,
+            "img":"watermelon.jpg"    
+        },
+    ]
+    
+
+    let result = "<table border=1><tr><td>id</td><td>name</td><td>price</td><td>picture</td></tr>";
+
+    fruits.forEach(myFunction);
+    function myFunction(item,index) {
+        result += "<tr>";
+        result += "<td>" + item['id'] + "</td>";
+        result += "<td>" + item['name'] + "</td>";
+        result += "<td>" + item['price'] + "</td>";
+        result += "<td>" + '<img src="' + item['img'] + '"alt="' + item['img'] + '"width=100 height=100">' + "</td>";
+        document.getElementById('demo').innerHTML = result; 
+    }
+
+    function pushButton(){
+        var x = document.getElementById("demo");
+        if (x.style.display === 'none'){
+            x.style.display = "block";
+        }else{
+            x.style.display = "none";
+        }
+
+        // var y = document.getElementById("description");
+        // if (y.style.display === 'none'){
+        //     y.style.display = "block";
+        // }else{
+        //     y.style.display = "none";
+        // }
+    }
+
+</script></head><body>
+    <!-- <img id="pic" src="orange.jpg"> -->
+    
+    <button type="button" onclick="pushButton()">กดเลย</button>
+</body></html>
